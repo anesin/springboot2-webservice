@@ -19,21 +19,24 @@ public class PostsRepositoryTest {
   @Autowired
   PostsRepository postsRepository;
 
+
   @After
   public void cleanup() {
     postsRepository.deleteAll();
   }
+
 
   @Test
   public void loadContent() {
     String title = "테스트 게시글";
     String content = "테스트 본문";
 
-    postsRepository.save(Posts.builder()
-                              .title(title)
-                              .content(content)
-                              .author("anesiner@gmail.com")
-                              .build());
+    postsRepository.save(
+        Posts.builder()
+             .title(title)
+             .content(content)
+             .author("anesiner@gmail.com")
+             .build());
 
     List<Posts> postsList = postsRepository.findAll();
 
