@@ -6,3 +6,4 @@
 .classpath
 .project
 .settings/org.eclipse.buildship.core.prefs
+/src/main/resources/application-oauth.properties
